@@ -1,0 +1,12 @@
+[Unit]
+Description=DHT Data
+Documentation=http://localhost:8000
+After=network-online.target
+
+[Service]
+User=pi
+Restart=on-failure
+
+ExecStart=python3 /home/pi/Projects/DHT22/humidity.py
+[Install]
+WantedBy=multi-user.target
