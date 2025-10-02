@@ -1,0 +1,28 @@
+---
+### Configuration file for resperry pi events detection system. Will automatically be loaded on startup.
+### Modify the parameters below to adjust the system settings.
+### For example it will control lights in the room
+### Also heater control. Camera settings for video capture.
+### Make sure to follow the YAML syntax.
+humidity_sensor:
+  enabled: true               # Enable or disable humidity sensor
+  type: DHT22                 # Sensor type (e.g., DHT11, DHT22)
+  pin: 18                     # GPIO pin number where the sensor is connected
+  read_interval: 60           # Interval in seconds to read the sensor
+  restart_on_failure: false   # Restart sensor reading on failure
+heater:
+  enabled: true               # Enable or disable heater control
+  target_temperature: 22.0    # Target temperature in Celsius
+  hysteresis: 1.0             # Hysteresis in Celsius to prevent rapid toggling
+light1:
+  enabled: true               # Enable or disable light control
+  on_hour: 18                 # Hour to turn lights on (24-hour format)
+  off_hour: 6                 # Hour to turn lights off (24-hour format)
+light2:
+  enabled: false              # Enable or disable second light control
+  on_hour: 19                 # Hour to turn lights on (24-hour format)
+  off_hour: 5                 # Hour to turn lights off (24-hour format)
+camera:
+  resolution: [1920, 1080]    # Camera resolution [width, height]
+  framerate: 30               # Camera frame rate in FPS
+  brightness: 60              # Camera brightness (0-100)
