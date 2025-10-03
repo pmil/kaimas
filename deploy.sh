@@ -1,5 +1,12 @@
+# copy services
 sudo cp ./systemd/*.service /etc/systemd/system/
 sudo cp ./systemd/*.timer /etc/systemd/system/
+
+# create checksum file
+sudo touch /var/lib/config-checksum
+sudo chown pi:pi /var/lib/config-checksum
+
+# Run services
 sudo systemctl daemon-reload
 sudo systemctl restart dht.service
 sudo systemctl restart prometheus.service

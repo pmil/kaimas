@@ -21,7 +21,7 @@ def run_cmd(cmd):
 
 def main():
     # git pull
-    subprocess.run(["git", "-C", REPO_DIR, "pull", "origin", "main"], check=True)
+    subprocess.run(["git", "-C", REPO_DIR, "pull"], check=True)
 
     new_hash = get_file_hash(CONFIG_FILE)
     old_hash = None

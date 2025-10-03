@@ -25,6 +25,11 @@ sudo apt install -y mosquitto mosquitto-clients
 sudo apt-get install git nodejs npm
 ```
 
+### Python libs
+```
+sudo apt install -y python3-yaml
+```
+
 ### User set
 ```
 git config --global user.name "pmil"
