@@ -1,4 +1,5 @@
 sudo cp ./systemd/*.service /etc/systemd/system/
+sudo cp ./systemd/*.timer /etc/systemd/system/
 sudo systemctl daemon-reload
 sudo systemctl restart dht.service
 sudo systemctl restart prometheus.service
