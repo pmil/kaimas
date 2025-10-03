@@ -1,0 +1,10 @@
+[Unit]
+Description=Run config update check every 5 minutes
+
+[Timer]
+OnBootSec=1min
+OnUnitActiveSec=5min
+Unit=config-update.service
+
+[Install]
+WantedBy=timers.target

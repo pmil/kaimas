@@ -1,0 +1,7 @@
+[Unit]
+Description=Update config from git and reload services if changed
+After=network.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/python3 /home/pi/Projects/DHT22/update_config.py
