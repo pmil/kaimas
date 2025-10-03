@@ -7,6 +7,6 @@ After=network-online.target
 User=pi
 Restart=on-failure
 
-ExecStart=python3 /home/pi/Projects/DHT22/humidity.py
+ExecStart=python3 /home/pi/kaimas/humidity.py
 [Install]
 WantedBy=multi-user.target
