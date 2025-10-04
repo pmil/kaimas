@@ -5,6 +5,8 @@ sudo cp ./systemd/*.timer /etc/systemd/system/
 # create checksum file
 sudo touch /var/lib/config-checksum
 sudo chown pi:pi /var/lib/config-checksum
+sudo chmod +x /home/pi/kaimas/git-pull.sh
+
 
 # Run services
 sudo systemctl daemon-reload

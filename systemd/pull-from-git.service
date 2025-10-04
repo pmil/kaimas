@@ -1,10 +1,14 @@
 [Unit]
 Description=Pull latest code from Git repository
+After=network.target
 
 [Service]
-User=pi
 Type=oneshot
+User=pi
+WorkingDirectory=/home/pi/kaimas
 ExecStart=/home/pi/kaimas/git-pull.sh
+StandardOutput=journal
+StandardError=journal
 
 [Install]
 WantedBy=multi-user.target
