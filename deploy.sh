@@ -6,6 +6,7 @@ sudo cp ./systemd/*.timer /etc/systemd/system/
 sudo touch /var/lib/config-checksum
 sudo chown pi:pi /var/lib/config-checksum
 sudo chmod +x /home/pi/kaimas/git-pull.sh
+sudo chmod +x /home/pi/kaimas/service_control.sh
 
 
 # Run services
