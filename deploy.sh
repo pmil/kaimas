@@ -14,3 +14,4 @@ sudo systemctl daemon-reload
 sudo systemctl restart dht.service
 sudo systemctl restart prometheus.service
 sudo systemctl restart pull-from-git.timer
+sudo systemctl enable service-control.service
