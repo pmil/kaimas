@@ -10,4 +10,4 @@ sudo chown pi:pi /var/lib/config-checksum
 sudo systemctl daemon-reload
 sudo systemctl restart dht.service
 sudo systemctl restart prometheus.service
-sudo systemctl enable --now config-update.timer
+sudo systemctl restart config-update.timer
