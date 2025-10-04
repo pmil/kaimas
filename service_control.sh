@@ -1,11 +1,5 @@
 #!/bin/bash
-# Usage: ./service_control.sh service_control.json
-
-# Check if jq is installed
-if ! command -v jq &>/dev/null; then
-    echo "Error: jq is not installed. Install it with: sudo apt install jq"
-    exit 1
-fi
+# Usage: ./service_control.sh action.json
 
 # Check input argument
 if [ -z "$1" ]; then
