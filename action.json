@@ -1,0 +1,4 @@
+{
+  "service": "dht.service",
+  "action": "restart"
+}
