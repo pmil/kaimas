@@ -1,0 +1,11 @@
+[Unit]
+Description=Handle service control after Git pull
+After=pull-from-git.service
+Requires=pull-from-git.service
+
+[Service]
+Type=oneshot
+ExecStart=/home/pi/kaimas/service_control.sh /home/pi/kaimas/action.json
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,9 @@
+[Unit]
+Description=Pull latest code from Git repository
+
+[Service]
+Type=oneshot
+ExecStart=/home/pi/kaimas/git-pull.sh
+
+[Install]
+WantedBy=multi-user.target
