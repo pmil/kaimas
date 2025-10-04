@@ -2,6 +2,7 @@
 Description=Pull latest code from Git repository
 
 [Service]
+User=pi
 Type=oneshot
 ExecStart=/home/pi/kaimas/git-pull.sh
 
