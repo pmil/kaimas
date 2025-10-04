@@ -3,6 +3,6 @@ Description=Update config from git and reload services if changed
 After=network.target
 
 [Service]
-User=root
+User=pi
 Type=oneshot
-ExecStart=/usr/bin/python3 /home/pi/kaimas/update-config.py
+ExecStart=sh /home/pi/kaimas/git-pull.sh
