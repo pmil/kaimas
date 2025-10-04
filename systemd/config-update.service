@@ -5,4 +5,4 @@ After=network.target
 [Service]
 User=pi
 Type=oneshot
-ExecStart=sh /home/pi/kaimas/git-pull.sh
+ExecStart=/home/pi/kaimas/git-pull.sh
