@@ -4,8 +4,6 @@ import board
 import time
 
 def get_dht_data():
-    DHT_SENSOR = Adafruit_DHT.DHT22
-    DHT_PIN = 4
     dht_data = []
 
     dht = adafruit_dht.DHT22(board.D4)
