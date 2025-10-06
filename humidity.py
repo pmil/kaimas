@@ -1,5 +1,6 @@
 from prometheus_client import start_http_server, Gauge
-import Adafruit_DHT
+import adafruit_dht
+import board
 import time
 
 def get_dht_data():
@@ -7,7 +8,13 @@ def get_dht_data():
     DHT_PIN = 4
     dht_data = []
 
-    humidity, temperature = Adafruit_DHT.read_retry(DHT_SENSOR, DHT_PIN)
+    dht = adafruit_dht.DHT22(board.D4)
+    try:
+        temperature = dht.temperature
+        humidity = dht.humidity
+        print(f"Temp={temperature:.1f}°C  Humidity={humidity:.1f}%") 
+    except RuntimeError as error:
+        print(error.args[0])
 
     if humidity is not None and temperature is not None:
         # print("Temp={0:0.1f}*C  Humidity={1:0.1f}%".format(temperature, humidity))
@@ -29,4 +36,4 @@ if __name__ == '__main__':
         dht_data = get_dht_data()
         adafruit_dht_temperature.set(dht_data[0])
         adafruit_dht_humidity.set(dht_data[1])
-        process_request(60)
+        process_request(30)

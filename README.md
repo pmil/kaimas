@@ -19,6 +19,8 @@ sudo raspi-config
 
 ### Install tools
 ```
+sudo apt update
+sudo apt upgrade
 sudo apt-get install git
 sudo apt-get install prometheus
 sudo apt install -y mosquitto mosquitto-clients
@@ -28,6 +30,8 @@ sudo apt-get install git nodejs npm
 ### Python libs
 ```
 sudo apt install -y python3-yaml
+sudo apt install -y python3-prometheus-client
+python3 -m pip install adafruit-circuitpython-dht --break-system-packages
 ```
 
 ### User set
