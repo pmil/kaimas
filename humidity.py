@@ -10,7 +10,6 @@ def get_dht_data():
     try:
         temperature = dht.temperature
         humidity = dht.humidity
-        print(f"Temp={temperature:.1f}°C  Humidity={humidity:.1f}%") 
     except RuntimeError as error:
         print(error.args[0])
 
