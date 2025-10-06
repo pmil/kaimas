@@ -15,6 +15,9 @@ PROM_PASSWORD=prom_password
 ### Config raspi
 ```
 sudo raspi-config
+mkdir /home/pi/prometheus
+mkdir /home/pi/prometheus/data
+
 ```
 
 ### Install tools

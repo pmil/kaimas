@@ -7,9 +7,6 @@ After=network-online.target
 User=pi
 Restart=on-failure
 
-# Load environment file
-EnvironmentFile=/home/pi/secrets.env
-
 ExecStart=prometheus \
   --config.file=/home/pi/kaimas/prometheus/prometheus.yml \
   --storage.tsdb.path=/home/pi/prometheus/data
