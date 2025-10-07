@@ -63,5 +63,8 @@ git clone --depth 1 https://github.com/Koenkk/zigbee2mqtt.git
 sudo npm install -g pnpm
 
 
+## Links
+# Node RED
+https://nodered.org/docs/getting-started/raspberrypi
 
 
