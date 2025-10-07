@@ -16,7 +16,8 @@ tsc --version
 cd ~
 git clone --depth 1 https://github.com/Koenkk/zigbee2mqtt.git
 cd zigbee2mqtt/
-npm install --omit=dev
+pnpm install
+pnpm build
 
 sudo systemctl start zigbee2mqtt
 sudo systemctl enable zigbee2mqtt

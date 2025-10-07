@@ -47,4 +47,4 @@ if __name__ == '__main__':
         else:
             print("Skipping update due to read error")
 
-        time.sleep(60)  # at least 2 seconds; 10 is safer
+        time.sleep(30)  # at least 2 seconds; 10 is safer
