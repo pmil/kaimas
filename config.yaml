@@ -1,4 +1,2 @@
----
-services:
-  - name: "dht.service"
-    action: "restart"
+- name: dht
+  action: restart
