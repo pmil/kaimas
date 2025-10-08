@@ -1,7 +1,7 @@
 # copy services
 sudo cp ./systemd/*.service /etc/systemd/system/
 sudo cp ./systemd/*.timer /etc/systemd/system/
-cp service-controller.py /usr/local/bin/service-controller.py
+sudo cp service-controller.py /usr/local/bin/service-controller.py
 
 # create checksum file
 sudo touch /var/lib/config-checksum
