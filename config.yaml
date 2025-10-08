@@ -2,5 +2,3 @@
 services:
   - name: "dht.service"
     action: "restart"
-  - name: "prometheus.service"
-    action: "start"

@@ -5,19 +5,22 @@ import time
 
 # Initialize DHT22 once (outside loop)
 # Use use_pulseio=False if on Pi (newer Adafruit library versions recommend it).
-dht_sensor = adafruit_dht.DHT22(board.D4, use_pulseio=False)
+
 
 # Prometheus metrics
 dht_humidity = Gauge('adafruit_dht_humidity', 'Humidity (%)')
 dht_temperature = Gauge('adafruit_dht_temperature', 'Temperature (Celsius)')
 
 def get_dht_data():
+    dht_sensor = adafruit_dht.DHT22(board.D4, use_pulseio=False)
     """Read temperature and humidity safely."""
     try:
         temperature = dht_sensor.temperature
         humidity = dht_sensor.humidity
 
         if humidity is not None and temperature is not None:
+            dht_sensor.exit()
+            dht_sensor=None
             return temperature, humidity
         else:
             print("DHT read failed: None values")
@@ -30,6 +33,7 @@ def get_dht_data():
         # If something worse happens, reinitialize the sensor
         print("Unexpected error:", e)
         dht_sensor.exit()
+        dht_sensor=None
         time.sleep(2)
         return None, None
 
