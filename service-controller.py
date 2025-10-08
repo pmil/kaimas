@@ -5,7 +5,7 @@ import urllib.request
 import os
 
 # URL of your YAML file in Git
-YAML_URL = "https://github.com/pmil/kaimas/raw/refs/heads/main/config.yaml"
+YAML_URL = "https://github.com/pmil/kaimas/raw/refs/heads/dev/config.yaml"
 LOCAL_YAML = "/tmp/config.yaml"
 
 # Download the YAML file
