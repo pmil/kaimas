@@ -21,3 +21,6 @@ pnpm build
 
 sudo systemctl start zigbee2mqtt
 sudo systemctl enable zigbee2mqtt
+
+# modify file to enable front end
+/home/pi/zigbee2mqtt/data/configuration.yaml
