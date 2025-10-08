@@ -1,0 +1,10 @@
+[Unit]
+Description=Service Controller from YAML
+After=network.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/bin/service-controller.py
+
+[Install]
+WantedBy=multi-user.target
