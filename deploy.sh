@@ -17,3 +17,5 @@ sudo systemctl restart dht.service
 sudo systemctl restart prometheus.service
 sudo systemctl enable service-controller.timer
 sudo systemctl start service-controller.timer
+sudo systemctl enable zigbee2mqtt.service
+sudo systemctl enable start.service
