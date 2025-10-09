@@ -1,2 +1,2 @@
 - name: dht
-  action: restart
+  action: start
