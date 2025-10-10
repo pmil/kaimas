@@ -2,11 +2,11 @@ import adafruit_dht
 import board
 
 # Choose your DHT sensor type:
-SENSOR = adafruit_dht.DHT22  # or Adafruit_DHT.DHT11
+SENSOR = adafruit_dht.DHT22(board.D4, use_pulseio=False)
 PIN = 4  # GPIO pin number (BCM numbering)
 
 def get_dht_data():
-    humidity, temperature = adafruit_dht.read_retry(SENSOR, PIN)
+    
     """Read temperature and humidity safely."""
     try:
         temperature = SENSOR.temperature
