@@ -1,2 +1,2 @@
-- name: Cam
-  state: OFF
+- name: "Cam"
+  state: "OFF"
