@@ -3,4 +3,5 @@ Description=Read DHT sensor and write humidity to /tmp/humidity.json and /home/p
 
 [Service]
 Type=oneshot
+User=pi
 ExecStart=/usr/bin/python3 /home/pi/kaimas/humidity_cli.py
