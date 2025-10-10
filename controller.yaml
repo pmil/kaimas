@@ -1,0 +1,4 @@
+- name: Cam
+  state: ON
+- name: Heater
+  state: ON

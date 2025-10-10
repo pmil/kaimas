@@ -34,6 +34,7 @@ sudo apt-get install git nodejs npm
 ```
 sudo apt install -y python3-yaml
 sudo apt install -y python3-prometheus-client
+sudo apt install -y python3-paho-mqtt
 python3 -m pip install adafruit-circuitpython-dht --break-system-packages
 ```
 

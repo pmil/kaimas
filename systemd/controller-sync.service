@@ -1,0 +1,7 @@
+[Unit]
+Description=Sync Zigbee devices based on controller.yaml
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/python3 /home/pi/kaimas/controller_sync.py
+User=pi
