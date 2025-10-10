@@ -22,7 +22,7 @@ if __name__ == '__main__':
         if data["temperature"] is not None and data["humidity"] is not None:
             dht_temperature.set(data["temperature"])
             dht_humidity.set(data["humidity"])
-            print(f"Temp={temperature}°C  Humidity={humidity}%")
+            print(f"Temp={data[\"temperature\"]}°C  Humidity={data[\"humidity\"]}%")
         else:
             print("Skipping update due to read error")
         time.sleep(60)  # at least 2 seconds; 10 is safer
