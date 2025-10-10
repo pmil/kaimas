@@ -9,11 +9,14 @@ YAML_URL = "https://github.com/pmil/kaimas/raw/refs/heads/dev/config.yaml"
 LOCAL_YAML = "/tmp/config.yaml"
 
 # URL of 
-YAML_URL = "https://github.com/pmil/kaimas/raw/refs/heads/dev/controller.yaml"
-LOCAL_YAML = "/tmp/controller.yaml"
+CONTROLLER_YAML_URL = "https://github.com/pmil/kaimas/raw/refs/heads/dev/controller.yaml"
+CONTROLLER_LOCAL_YAML = "/tmp/controller.yaml"
 
 # Download the YAML file
 urllib.request.urlretrieve(YAML_URL, LOCAL_YAML)
+
+# Download the CONTROLLER_ file
+urllib.request.urlretrieve(CONTROLLER_YAML_URL, CONTROLLER_LOCAL_YAML)
 
 # Read the YAML
 with open(LOCAL_YAML, "r") as f:
