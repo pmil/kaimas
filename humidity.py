@@ -1,6 +1,7 @@
 from prometheus_client import start_http_server, Gauge
 import time
 import json
+import os
 
 # Prometheus metrics
 dht_humidity = Gauge('adafruit_dht_humidity', 'Humidity (%)')
