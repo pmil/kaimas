@@ -1,6 +1,7 @@
 import adafruit_dht
 import board
 import time
+import json
 
 def get_dht_data():
     SENSOR = adafruit_dht.DHT22(board.D4, use_pulseio=False)
