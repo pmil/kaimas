@@ -1,6 +1,6 @@
 [Unit]
-Description=Read DHT sensor and write humidity to /tmp/humidity.json
+Description=Read DHT sensor and write humidity to /tmp/humidity.json and /home/pi/node_exporter/humidity.prom
 
 [Service]
 Type=oneshot
-ExecStart=/usr/bin/python3 /home/pi/dht_to_json.py
+ExecStart=/usr/bin/python3 /home/pi/humidity_cli.py

@@ -41,6 +41,22 @@ def write_to_json(data, path="/tmp/humidity.json"):
     except Exception as e:
         print(f"Error writing to {path}: {e}")
 
+def write_to_prom(data, filepath):
+    temperature = data['temperature']
+    humidity = data['humidity']
+    timestamp = data['timestamp']
+    with open(filepath, "w") as f:
+        f.write(f"# HELP dht_temperature_celsius Temperature in Celsius\n")
+        f.write(f"# TYPE dht_temperature_celsius gauge\n")
+        f.write(f"dht_temperature_celsius {temperature:.2f}\n")
+        f.write(f"# HELP dht_humidity_percent Relative humidity in percent\n")
+        f.write(f"# TYPE dht_humidity_percent gauge\n")
+        f.write(f"dht_humidity_percent {humidity:.2f}\n")
+        f.write(f"# HELP dht_last_timestamp Timestamp\n")
+        f.write(f"# TYPE dht_last_timestamp gauge\n")
+        f.write(f"dht_last_timestamp {timestamp:.2f}\n")
+
 if __name__ == '__main__':
     data = get_dht_data()
     write_to_json(data)
+    write_to_prom(data,'/home/pi/node_exporter/humidity.prom')

@@ -28,6 +28,7 @@ sudo apt-get install git
 sudo apt-get install prometheus
 sudo apt install -y mosquitto mosquitto-clients
 sudo apt-get install git nodejs npm
+sudo apt install prometheus-node-exporter
 ```
 
 ### Python libs
@@ -69,3 +70,10 @@ sudo npm install -g pnpm
 https://nodered.org/docs/getting-started/raspberrypi
 
 
+
+
+# Prometheus to read from file
+sudo nano /lib/systemd/system/prometheus-node-exporter.service
+ExecStart=/usr/bin/prometheus-node-exporter \
+  --collector.textfile.directory=/home/pi/node_exporter
+sudo systemctl status prometheus-node-exporter.service
