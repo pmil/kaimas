@@ -23,7 +23,7 @@ def main():
     if not os.path.exists(CONFIG_FILE):
         print(f"❌ Config file not found: {CONFIG_FILE}")
         return
-
+    print(f"Reading file {CONFIG_FILE}")
     try:
         config = read_yaml(CONFIG_FILE)
         for item in config:
