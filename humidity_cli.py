@@ -48,13 +48,13 @@ def write_to_prom(data, filepath):
     with open(filepath, "w") as f:
         f.write(f"# HELP dht_temperature_celsius Temperature in Celsius\n")
         f.write(f"# TYPE dht_temperature_celsius gauge\n")
-        f.write(f"dht_temperature_celsius {temperature:.2f}\n")
+        f.write(f"dht_temperature_celsius {temperature}\n")
         f.write(f"# HELP dht_humidity_percent Relative humidity in percent\n")
         f.write(f"# TYPE dht_humidity_percent gauge\n")
-        f.write(f"dht_humidity_percent {humidity:.2f}\n")
+        f.write(f"dht_humidity_percent {humidity}\n")
         f.write(f"# HELP dht_last_timestamp Timestamp\n")
         f.write(f"# TYPE dht_last_timestamp gauge\n")
-        f.write(f"dht_last_timestamp {timestamp:.2f}\n")
+        f.write(f"dht_last_timestamp {timestamp}\n")
 
 if __name__ == '__main__':
     data = get_dht_data()
