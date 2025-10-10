@@ -20,18 +20,30 @@ def get_dht_data():
             }
         else:
             print("DHT read failed: None values")
-            return None, None
+            return {
+                "temperature": round(0, 2),
+                "humidity": round(0, 2),
+                "timestamp": time.strftime("%Y-%m-%d %H:%M:%S")
+            }
     except RuntimeError as error:
         # Common DHT error, just retry next loop
         print("RuntimeError:", error.args[0])
-        return None, None
+        return {
+                "temperature": round(0, 2),
+                "humidity": round(0, 2),
+                "timestamp": time.strftime("%Y-%m-%d %H:%M:%S")
+            }
     except Exception as e:
         # If something worse happens, reinitialize the sensor
         print("Unexpected error:", e)
         SENSOR.exit()
         SENSOR=None
         time.sleep(2)
-        return None, None
+        return {
+                "temperature": round(0, 2),
+                "humidity": round(0, 2),
+                "timestamp": time.strftime("%Y-%m-%d %H:%M:%S")
+            }
 
 def write_to_json(data, path="/tmp/humidity.json"):
     try:

@@ -77,3 +77,10 @@ sudo nano /lib/systemd/system/prometheus-node-exporter.service
 ExecStart=/usr/bin/prometheus-node-exporter \
   --collector.textfile.directory=/home/pi/node_exporter
 sudo systemctl status prometheus-node-exporter.service
+
+
+# Install influxdb
+wget -q https://repos.influxdata.com/influxdata-archive.key
+echo "deb [signed-by=/usr/share/keyrings/influxdata-archive.key] https://repos.influxdata.com/debian stable main" | sudo tee /etc/apt/sources.list.d/influxdata.list
+sudo apt update
+sudo apt install influxdb2 -y
