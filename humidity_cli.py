@@ -42,9 +42,9 @@ def write_to_json(data, path="/tmp/humidity.json"):
         print(f"Error writing to {path}: {e}")
 
 def write_to_prom(data, filepath):
-    temperature = data['temperature']
-    humidity = data['humidity']
-    timestamp = data['timestamp']
+    temperature = data["temperature"]
+    humidity = data["humidity"]
+    timestamp = data["timestamp"]
     with open(filepath, "w") as f:
         f.write(f"# HELP dht_temperature_celsius Temperature in Celsius\n")
         f.write(f"# TYPE dht_temperature_celsius gauge\n")
