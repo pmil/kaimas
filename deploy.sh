@@ -12,10 +12,9 @@ sudo chmod +x /home/pi/kaimas/service_control.sh
 
 # Run services
 sudo systemctl daemon-reload
-sudo systemctl enable dht.service
-sudo systemctl restart dht.service
 sudo systemctl restart prometheus.service
 sudo systemctl enable service-controller.timer
 sudo systemctl start service-controller.timer
 sudo systemctl enable zigbee2mqtt.service
 sudo systemctl enable zigbee2mqtt.service
+sudo systemctl enable dht-to-json.timer
