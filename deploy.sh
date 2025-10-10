@@ -7,8 +7,6 @@ sudo chmod 755 /usr/local/bin/service-controller.py
 # create checksum file
 sudo touch /var/lib/config-checksum
 sudo chown pi:pi /var/lib/config-checksum
-sudo chmod +x /home/pi/kaimas/git-pull.sh
-sudo chmod +x /home/pi/kaimas/service_control.sh
 
 # Run services
 sudo systemctl daemon-reload
