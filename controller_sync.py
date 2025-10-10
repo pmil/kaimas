@@ -4,7 +4,7 @@ import paho.mqtt.publish as publish
 import os
 
 # Configuration
-CONFIG_FILE = "/home/pi/kaimas/controller.yaml"
+CONFIG_FILE = "/tmp/controller.yaml"
 MQTT_BROKER = "localhost"
 MQTT_PORT = 1883
 

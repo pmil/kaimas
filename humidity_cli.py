@@ -6,6 +6,9 @@ import json
 def get_dht_data():
     SENSOR = adafruit_dht.DHT22(board.D4, use_pulseio=False)
     """Read temperature and humidity safely."""
+    # Problem was with the assignment of Null values into data
+    # Process was failing and to read null from json
+    # Other think DHT22 was cloging due to alway opened connection with it
     try:
         temperature = SENSOR.temperature
         humidity = SENSOR.humidity
