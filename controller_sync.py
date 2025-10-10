@@ -14,6 +14,7 @@ def read_yaml(path):
 
 def send_device_state(name, state):
     topic = f"zigbee2mqtt/{name}/set"
+    print(f"Sending data to a {topic}")
     payload = f'{{"state":"{state}"}}'
     publish.single(topic, payload, hostname=MQTT_BROKER, port=MQTT_PORT)
     print(f"Sent {payload} to {topic}")
