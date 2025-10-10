@@ -1,0 +1,10 @@
+[Unit]
+Description=Run DHT to JSON script every minute
+
+[Timer]
+OnBootSec=30s
+OnUnitActiveSec=60s
+Unit=dht-to-json.service
+
+[Install]
+WantedBy=timers.target

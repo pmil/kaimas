@@ -1,0 +1,6 @@
+[Unit]
+Description=Read DHT sensor and write humidity to /tmp/humidity.json
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/python3 /home/pi/dht_to_json.py
