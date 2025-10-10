@@ -56,6 +56,7 @@ sudo systemctl start mosquitto
 
 ### Test mosquitto
 mosquitto_sub -v -t '#'
+mosquitto_pub -h localhost -t "zigbee2mqtt/Cam/set" -m '{"state": "OFF"}'
 
 ### Read data from localhost
 curl -v http://localhost:8000

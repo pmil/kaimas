@@ -29,6 +29,7 @@ def main():
         for item in config:
             name = item.get("name")
             state = item.get("state")
+            print(f"name: {name}\nstate: {state}")
             if name and state:
                 send_device_state(name, state)
     except Exception as e:
