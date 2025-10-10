@@ -7,12 +7,9 @@ import os
 dht_humidity = Gauge('adafruit_dht_humidity', 'Humidity (%)')
 dht_temperature = Gauge('adafruit_dht_temperature', 'Temperature (Celsius)')
 
-tmp_path = "/tmp/humidity.json.tmp"
-final_path = "/tmp/humidity.json"
+file_path = "/tmp/humidity.json"
 
 def get_dht_data():
-
-    file_path = tmp_path
     with open(file_path, "r") as f:
         data = json.load(f)
     return data
@@ -22,7 +19,6 @@ if __name__ == '__main__':
     print("Prometheus metrics available on port http://localhost:8000")
 
     while True:
-        os.replace(final_path, tmp_path) 
         data = get_dht_data()
         temperature=data["temperature"]
         humidity=data["humidity"]
