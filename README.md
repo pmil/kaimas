@@ -2,7 +2,8 @@
 
 ### Flash fresh pi
 ```
-wget https://downloads.raspberrypi.org/raspios_lite_armhf_latest -O raspios_lite_latest.zip
+wget https://downloads.raspberrypi.org/raspios_lite_armhf_latest -O raspios_lite_latest.zip.xz
+unxz raspios_lite_latest.zip.xz
 sudo dd if=2025-05-13-raspios-bookworm-armhf-lite.img of=/dev/sda bs=4M status=progress conv=fsync
 ```
 
