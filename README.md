@@ -2,9 +2,10 @@
 
 ### Flash fresh pi
 ```
-wget https://downloads.raspberrypi.org/raspios_lite_armhf_latest -O raspios_lite_latest.zip.xz
-unxz raspios_lite_latest.zip.xz
-sudo dd if=2025-05-13-raspios-bookworm-armhf-lite.img of=/dev/sda bs=4M status=progress conv=fsync
+wget https://downloads.raspberrypi.org/raspios_lite_armhf_latest
+mv raspios_lite_armhf_latest 2025-10-01-raspios-trixie-armhf-lite.img.xz
+unxz 2025-10-01-raspios-trixie-armhf-lite.img.xz
+sudo dd if=2025-10-01-raspios-trixie-armhf-lite.img of=/dev/sda bs=4M status=progress conv=fsync
 ```
 
 ### Create secrets.env file
@@ -34,9 +35,13 @@ sudo apt install prometheus-node-exporter
 
 ### Python libs
 ```
+sudo apt install -y python3-pip
+sudo apt install -y python3-Adafruit_Python_DHT
 sudo apt install -y python3-yaml
 sudo apt install -y python3-prometheus-client
 sudo apt install -y python3-paho-mqtt
+sudo python3 -m pip install Adafruit_Python_DHT --break-system-packages
+
 python3 -m pip install adafruit-circuitpython-dht --break-system-packages
 ```
 
