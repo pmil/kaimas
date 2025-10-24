@@ -1,13 +1,13 @@
 from prometheus_client import start_http_server, Gauge
-import Adafruit_Python_DHT
+import Adafruit_DHT
 import time
 
 def get_dht_data():
-    DHT_SENSOR = Adafruit_Python_DHT.DHT22
+    DHT_SENSOR = Adafruit_DHT.DHT22
     DHT_PIN = 4 
     dht_data = []
 
-    humidity, temperature = Adafruit_Python_DHT.read_retry(DHT_SENSOR, DHT_PIN)
+    humidity, temperature = Adafruit_DHT.read_retry(DHT_SENSOR, DHT_PIN)
 
     if humidity is not None and temperature is not None:
         # print("Temp={0:0.1f}*C  Humidity={1:0.1f}%".format(temperature, humidity))
