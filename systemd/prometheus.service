@@ -8,7 +8,7 @@ User=pi
 Restart=on-failure
 
 ExecStart=prometheus \
-  --config.file=/home/pi/kaimas/prometheus/prometheus.yml \
+  --config.file=/home/pi/prometheus/prometheus.yml \
   --storage.tsdb.path=/home/pi/prometheus/data
 
 [Install]
