@@ -1,0 +1,1 @@
+sudo cp ~/kaimas/systemd/prometheus.service /etc/systemd/system/

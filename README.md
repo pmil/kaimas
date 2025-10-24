@@ -27,7 +27,7 @@ mkdir /home/pi/prometheus/data
 sudo apt update
 sudo apt upgrade
 sudo apt-get install git
-sudo apt-get install prometheus
+sudo apt-get install prometheus -y
 sudo apt install -y mosquitto mosquitto-clients
 sudo apt-get install git nodejs npm
 sudo apt install prometheus-node-exporter
