@@ -7,11 +7,11 @@ def get_dht_data():
     DHT_PIN = 4 
     dht_data = []
 
-    humidity, temperature = Adafruit_DHT.read_retry(DHT_SENSOR.round(0, 2), DHT_PIN.round(0, 2))
+    humidity, temperature = Adafruit_DHT.read_retry(DHT_SENSOR, DHT_PIN)
 
     if humidity is not None and temperature is not None:
         # print("Temp={0:0.1f}*C  Humidity={1:0.1f}%".format(temperature, humidity))
-        dht_data=[temperature, humidity]
+        dht_data=[temperature.round(0, 2), humidity.round(0, 2)]
     else:
         print("Failed to retrieve data from humidity sensor")
     return dht_data
