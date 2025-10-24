@@ -1,5 +1,5 @@
 from prometheus_client import start_http_server, Gauge
-import adafruit_python_dht
+import Adafruit_Python_DHT
 import time
 
 def get_dht_data():
