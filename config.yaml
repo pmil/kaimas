@@ -1,6 +1,6 @@
 ---
 services:
   - name: "dht.service"
-    action: "restart"
+    action: "stop"
   - name: "prometheus.service"
     action: "start"
